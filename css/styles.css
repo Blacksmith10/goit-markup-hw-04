@@ -6,6 +6,7 @@
   --secondary-text-color: #212121;
   --logo-main-color: #000000;
   --logo-second-color: #ffffff;
+  --icon-main-color: #afb1b8;
 }
 
 body {
@@ -122,7 +123,7 @@ body {
 }
 
 .nav-contacts .item + .item {
-  margin-left: 50px;
+  margin-left: 30px;
 }
 
 .site-nav-link:hover,
@@ -137,6 +138,9 @@ body {
 }
 
 .nav-contacts-link {
+  display: flex;
+  align-items: center;
+
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
@@ -151,7 +155,16 @@ body {
   padding-top: 200px;
   padding-bottom: 200px;
   text-align: center;
-  background-color: var(--background-color-secondary);
+  background-color: #c4c4c4;
+}
+
+.overlay {
+  max-width: 1600px;
+  height: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  background-image: linear-gradient(to bottom, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+    url(../images/companyteam.jpg);
 }
 
 .hero-title {
@@ -242,7 +255,8 @@ body {
 }
 
 .section-photo-title,
-.section-team-title {
+.section-team-title,
+.section-clients-title {
   margin: 0 auto 50px;
 
   font-weight: 700;
@@ -274,7 +288,7 @@ body {
 
 .team-all {
   padding-top: 30px;
-  padding-bottom: 30px;
+  padding-bottom: 16px;
 }
 
 .section-team .work {
@@ -295,6 +309,8 @@ body {
   font-size: 16px;
   line-height: 1.18;
 }
+
+/* Section Clients */
 
 /* Footer */
 
@@ -322,6 +338,29 @@ body {
 
 .address .item + .item {
   margin-top: 9px;
+}
+
+.footer .title {
+  margin-top: 0px;
+  margin-bottom: 20px;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  text-transform: uppercase;
+  color: var(--logo-second-color);
+}
+
+.footer-container {
+  display: flex;
+  flex-direction: column;
+
+  margin: 0 auto;
+  padding: 0px 15px;
+  width: 1200px;
+}
+
+.join {
+  display: inline-block;
 }
 
 /* Portfolio */
@@ -379,6 +418,11 @@ body {
   margin-bottom: 30px;
 }
 
+.filter-products .item:hover {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+
 .filter-products .item:nth-child(3n) {
   margin-right: 0px;
 }
@@ -422,4 +466,117 @@ body {
 
 .products-link {
   text-decoration: none;
+}
+
+/* Vector */
+
+.header-icon {
+  margin-right: 10px;
+  fill: currentColor;
+}
+
+.features-icon {
+  padding: 25px 100px;
+}
+
+.features-text {
+  padding-top: 30px;
+}
+
+.team-links {
+  display: flex;
+  list-style: none;
+  padding-left: 32px;
+  padding-right: 32px;
+  padding-bottom: 30px;
+}
+
+.team-links .list + .list {
+  margin-left: 10px;
+}
+
+.team-icon {
+  display: flex;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: var(--background-color-main);
+  fill: var(--icon-main-color);
+  align-items: center;
+  justify-content: center;
+}
+
+.team-icon:hover,
+.team-icon:focus {
+  background-color: var(--accent-color);
+  fill: var(--background-color-main);
+}
+
+/* Vector Clients-icon */
+
+.clients-links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.clients-icon {
+  display: flex;
+  width: 170px;
+  height: 92px;
+  fill: var(--icon-main-color);
+  align-items: center;
+  justify-content: center;
+
+  padding-left: 32px;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  padding-right: 32px;
+}
+
+.clients-links .list {
+  width: 170px;
+  height: 92px;
+  border: 1px solid var(--icon-main-color);
+  border-radius: 4px;
+}
+
+.clients-links .list + .list {
+  margin-left: 30px;
+}
+
+.clients-icon:hover,
+.clients-icon:focus {
+  fill: var(--accent-color);
+}
+
+.clients-links .list:hover,
+.clients-links .list:focus {
+  border-color: var(--accent-color);
+}
+
+.join-icon {
+  display: flex;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.1);
+  fill: var(--background-color-main);
+  align-items: center;
+  justify-content: center;
+}
+
+.join-icon:hover,
+.join-icon:focus {
+  background-color: var(--accent-color);
+  fill: var(--background-color-main);
+}
+
+.join-links {
+  display: flex;
+  list-style: none;
+}
+
+.join-links .list + .list {
+  margin-left: 10px;
 }
